@@ -29,5 +29,16 @@
     "price": "800",
     "like":false
   }
+  ,
+  {
+    "id":4,
+    "title1": "Loft en Medellín",
+    "title2": "New Loft near Parque de los Pies Des...",
+    "perks": "2 huéspedes · 1 habitación · 1 cama · 1 baño · Wifi · Cocina · Estacionamiento gratuito",
+    "calification": "4,53",
+    "comments": "15",
+    "price": "1800",
+    "like":true
+  }
 ]
 }

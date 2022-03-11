@@ -1,9 +1,12 @@
 import styles from '../styles/PlaceCard.module.css'
 import placePic from '../assets/images/image14.png'
+import arrowPic from '../assets/logos/icons-expand-arrow.svg'
 import fullHeart from '../assets/logos/icons-full-heart.svg'
 import emptyHeart from '../assets/logos/icons-empty-heart.svg'
 import starLogo from '../assets/logos/icons8-star-90 2.svg'
 import Image from 'next/image'
+import { createMock } from '../utils/mockData'
+console.log(createMock(1))
 
 export default function PlaceCard(props) {
   return (
@@ -13,6 +16,12 @@ export default function PlaceCard(props) {
           src={placePic}
           alt={"Place image"}
         />
+        <div className={styles.arrow_slider}>
+          <Image
+            src={arrowPic}
+            alt={"Place image"}
+          />
+        </div>
       </div>
       <div className={styles.details_container}>
         <div className={styles.card_header}>
