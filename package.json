@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "server": "json-server --watch data.json --delay 1500 --port 3005"
+    "server": "json-server --watch data.json --delay 1500 --port 3005",
+    "test": "jest"
   },
   "dependencies": {
     "axios": "^0.26.1",
@@ -21,7 +22,13 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^6.0.0-beta.0",
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^12.1.4",
+    "@testing-library/react-hooks": "^7.0.2",
+    "babel-jest": "^27.5.1",
     "eslint": "8.10.0",
-    "eslint-config-next": "12.1.0"
+    "eslint-config-next": "12.1.0",
+    "jest": "^27.5.1",
+    "msw": "^0.39.2"
   }
 }
