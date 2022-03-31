@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = process.env.PLACES_APP_API || 'http://localhost:3000/api/places';
+const API = process.env.PLACES_APP_API || '/api/places';
 
 
 export const getPlaces = async () => {
