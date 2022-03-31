@@ -1,11 +1,12 @@
 import PlaceCard from "../components/PlaceCard";
-import useGetPlaces from '../hooks/useGetPlaces';
 import styled from 'styled-components';
+import {usePlaces} from '../hooks/useGetPlaces'
 
 
 
 export default function Places() {
-  const { data: places, error, isLoading } = useGetPlaces();
+  // const test = usePlaces();
+  const { data: places, error, isLoading } = usePlaces();
 
   return (
     <>
@@ -17,7 +18,7 @@ export default function Places() {
             Loading places...
           </LoadingMessage>
         </LoaderContainer>}
-
+      {/* {console.log(places,'**** dentro del comp********')} */}
       {places && places.map(place => (
         <PlaceCard key={place.id} place={place} />
       ))}

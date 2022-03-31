@@ -12,16 +12,22 @@ export default function PlaceCard(props) {
       <MainContainer>
         <ImageContainer>
           <SectionSlider>
+            {/* {console.log(props.place.images)} */}
             <Slider images={props.place.images} />
           </SectionSlider>
         </ImageContainer>
         <DetailsContainer>
           <CardHeader>
             <p>{props.place.title1}</p>
-            <Image
+            {/* <Image
               src={props.place.like ? fullHeart : emptyHeart}
               alt={"Place image"}
-            />
+            /> */}
+            <img
+              src={'https://cdn-user-icons.flaticon.com/45275/45275471/1648692649451.svg?token=exp=1648693585~hmac=2b1187827c659ea397de9af7529ebf48'}
+              width={40}
+              height={40}
+              alt={"HeartIcon"}></img>
           </CardHeader>
           <CardBody>
             <SubTitleCardBody>
@@ -34,10 +40,15 @@ export default function PlaceCard(props) {
           </CardBody>
           <CardFooter>
             <ContainerPuntuation>
-              <Image
+              {/* <Image
                 src={starLogo}
                 alt={"Place image"}
-              />
+              /> */}
+              <img
+                src={'https://cdn-user-icons.flaticon.com/45275/45275471/1648692670283.svg?token=exp=1648693585~hmac=b1e8ab1305787db5e5e3fd419433f3ae'}
+                width={30}
+                height={30}
+                alt={"StarIcon"}></img>
               <p>{props.place.calification}</p>
               <p>{`( ${props.place.comments} Reseñas) `}</p>
             </ContainerPuntuation>
@@ -119,6 +130,7 @@ const CardFooter = styled.div`
 const ContainerPuntuation = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   p:nth-child(2){
   font-size: 18px;

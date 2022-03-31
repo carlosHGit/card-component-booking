@@ -1,14 +1,8 @@
-import axios from "axios";
-import { useQuery } from "react-query";
+import { useQuery} from "react-query";
+import {  getPlaces } from "../api/places";
 
 
-const API = process.env.PLACES_APP_API || __dirname + 'api/';
-
-const getPlaces = () =>
-  axios.get(`${API}/places`)
-    .then(response => response.data)
-
-
-export default function useGetPlaces() {
-  return useQuery(["places"], () => getPlaces());
+export function usePlaces() {
+  return useQuery('places', getPlaces);
 }
+

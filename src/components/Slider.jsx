@@ -5,9 +5,10 @@ import leftArrow from '../assets/logos/icons-rigth-arrow.svg'
 import Image from 'next/image'
 
 
-const Slider = (props) => {
+
+export default function Slider(props) {
   const sliderImages = props.images;
-  const velocidad = 800; // a posible env/config vble in he future
+  const velocidad = 300; // a posible env/config vble in he future
   const slideshow = useRef(null);
 
   const next = () => {
@@ -28,7 +29,7 @@ const Slider = (props) => {
     }
   };
 
-  const before = () => {
+  const before = async () => {
     if (slideshow.current.children.length > 0) {
       const index = slideshow.current.children.length - 1;
       const ultimoElemento = slideshow.current.children[index];
@@ -37,7 +38,7 @@ const Slider = (props) => {
       const tamañoSlide = slideshow.current.children[0].offsetWidth;
       slideshow.current.style.transform = `translateX(-${tamañoSlide}px)`;
 
-      setTimeout(() => {
+      await setTimeout(() => {
         slideshow.current.style.transition = `${velocidad}ms ease-out all`;
         slideshow.current.style.transform = `translateX(0)`;
       }, 30);
@@ -45,45 +46,59 @@ const Slider = (props) => {
   }
 
   return (
-      <MainContainer>
-        <SliderContainer ref={slideshow}>
-          {sliderImages.map(image => (
-            <Slide key={image}>
-              <a>
-                <ImageContainer
-                  alt='image'
-                  src={image}
-                  width={291}
-                  height={260}
-                  objectFit={'cover'}
-                />
-              </a>
-            </Slide>
-          ))}
-        </SliderContainer>
-        <SliderControls>
-          <Arrow onClick={before}>
-            <ArrowContainer>
-              <Image
-                alt=''
-                src={leftArrow} />
-            </ArrowContainer>
-          </Arrow>
-          <Arrow rigth onClick={next}>
-            <ArrowContainer>
-              <Image
-                alt=''
-                src={rigthArrow} />
-            </ArrowContainer>
-          </Arrow>
-        </SliderControls>
-      </MainContainer>
+    <MainContainer>
+      <SliderContainer ref={slideshow} data-testid="cotainer-slider">
+        {sliderImages.map(image => (
+          <Slide key={image}>
+            <a>
+              <ImageContainer
+                alt='image'
+                src={image}
+                width={291}
+                height={260}
+                objectFit={'cover'}
+              />
+            </a>
+          </Slide>
+        ))}
+      </SliderContainer>
+      <SliderControls>
+        <Arrow onClick={before}>
+          <ArrowContainer>
+            {/* <Image
+              alt=''
+              src={leftArrow}
+            /> */}
+            <img
+              alt='lArrow'
+              src={'https://cdn-user-icons.flaticon.com/45275/45275471/1648692805533.svg?token=exp=1648693707~hmac=d9d3cadfd0dcf99cb53a3475324dbfb8'}
+              height={24}
+              width={24}
+            />
+          </ArrowContainer>
+        </Arrow>
+        <Arrow rigth onClick={next}>
+          <ArrowContainer>
+            {/* <Image
+              alt=''
+              src={rigthArrow}
+              /> */}
+            <img
+              alt='rArrow'
+              src={'https://cdn-user-icons.flaticon.com/45275/45275471/1648692805533.svg?token=exp=1648693707~hmac=d9d3cadfd0dcf99cb53a3475324dbfb8'}
+              height={24}
+              width={24}
+            />
+          </ArrowContainer>
+        </Arrow>
+      </SliderControls>
+    </MainContainer>
   );
 }
 
 const ArrowContainer = styled.div`
   display:  grid;
-  align-items: center;
+  place-items: center;
   border-radius: 100px;
   width: 40px;
   height: 40px;

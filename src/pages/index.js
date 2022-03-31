@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <Container>
         <h1>Bienvenidos a Places Squad</h1>
-        <Link href={'/Places'}>
+        <Link href={'/Places'} passHref>
           <Anchor>
             Ir a places
           </Anchor>
