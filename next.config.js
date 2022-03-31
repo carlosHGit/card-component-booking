@@ -2,7 +2,7 @@
 
 const nextConfig = {
   images: {
-    domains: ['images.pexels.com'],
+    domains: ['images.pexels.com', 'cdn-user-icons.flaticon.com'],
   }
 }
 
