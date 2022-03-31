@@ -7,13 +7,14 @@ import styled from 'styled-components'
 
 
 export default function PlaceCard(props) {
+  const defaultImage = ['https://images.pexels.com/photos/3342739/pexels-photo-3342739.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500']
   return (
     <>
       <MainContainer>
         <ImageContainer>
           <SectionSlider>
-            {/* {console.log(props.place.images)} */}
-            <Slider images={props.place.images} />
+            {console.log(props.place.images)}
+            <Slider images={(props.place.images.length === 0) ? defaultImage : props.place.images } />
           </SectionSlider>
         </ImageContainer>
         <DetailsContainer>

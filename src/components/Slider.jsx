@@ -47,7 +47,7 @@ export default function Slider(props) {
 
   return (
     <MainContainer>
-      <SliderContainer ref={slideshow} data-testid="cotainer-slider">
+      <SliderContainer ref={slideshow}>
         {sliderImages.map(image => (
           <Slide key={image}>
             <a>
