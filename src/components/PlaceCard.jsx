@@ -24,7 +24,7 @@ export default function PlaceCard(props) {
               alt={"Place image"}
             /> */}
             <img
-              src={'https://cdn-user-icons.flaticon.com/45275/45275471/1648692649451.svg?token=exp=1648693585~hmac=2b1187827c659ea397de9af7529ebf48'}
+              src={'https://cdn-icons-png.flaticon.com/128/4643/4643982.png'}
               width={40}
               height={40}
               alt={"HeartIcon"}></img>
@@ -45,7 +45,7 @@ export default function PlaceCard(props) {
                 alt={"Place image"}
               /> */}
               <img
-                src={'https://cdn-user-icons.flaticon.com/45275/45275471/1648692670283.svg?token=exp=1648693585~hmac=b1e8ab1305787db5e5e3fd419433f3ae'}
+                src={'https://cdn-icons.flaticon.com/png/128/3984/premium/3984392.png?token=exp=1648696258~hmac=2930df15fa4fbbf45aad5bfa377f9acc'}
                 width={30}
                 height={30}
                 alt={"StarIcon"}></img>

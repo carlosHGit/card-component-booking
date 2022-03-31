@@ -71,9 +71,9 @@ export default function Slider(props) {
             /> */}
             <img
               alt='lArrow'
-              src={'https://cdn-user-icons.flaticon.com/45275/45275471/1648692805533.svg?token=exp=1648693707~hmac=d9d3cadfd0dcf99cb53a3475324dbfb8'}
-              height={24}
-              width={24}
+              src={'https://cdn-icons-png.flaticon.com/128/1665/1665761.png'}
+              height={40}
+              width={40}
             />
           </ArrowContainer>
         </Arrow>
@@ -85,9 +85,9 @@ export default function Slider(props) {
               /> */}
             <img
               alt='rArrow'
-              src={'https://cdn-user-icons.flaticon.com/45275/45275471/1648692805533.svg?token=exp=1648693707~hmac=d9d3cadfd0dcf99cb53a3475324dbfb8'}
-              height={24}
-              width={24}
+              src={'https://cdn-icons-png.flaticon.com/128/1665/1665761.png'}
+              height={40}
+              width={40}
             />
           </ArrowContainer>
         </Arrow>
