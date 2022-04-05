@@ -1,4 +1,5 @@
 import PlaceCard from "../components/PlaceCard";
+import Header from "../components/Header";
 import styled from 'styled-components';
 import {usePlaces} from '../hooks/useGetPlaces'
 
@@ -10,6 +11,7 @@ export default function Places() {
 
   return (
     <>
+      <Header/>
       {error && <p>Error fetching posts: {error.message}</p>}
 
       {isLoading &&

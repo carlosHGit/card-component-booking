@@ -1,6 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
-import userImg from '../assets/logos/icon-user.png'
+// import userImg from '../assets/logos/icon-user.png'
 import '../styles/Header.module.css'
 
 export const Header = () => {
@@ -46,7 +46,7 @@ export const Header = () => {
       </Forms>
       <UserProfile>
         <a className="become-host" href="#">Hazte anfitrión</a>
-        <img className="user-img" src={userImg} alt="Profile" />
+        <img className="user-img" src="" alt="Profile" />
         <span className="notifications">?</span>
         <ul className="user-menu">
           <li>Mensajes</li>
