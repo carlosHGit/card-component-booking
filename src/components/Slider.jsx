@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import styled from 'styled-components';
-import rigthArrow from '../assets/logos/icons-rigth-arrow.svg'
-import leftArrow from '../assets/logos/icons-rigth-arrow.svg'
+import rigthArrow from '../../public/assets/logos/icons-rigth-arrow.svg'
+import leftArrow from '../../public/assets/logos/icons-rigth-arrow.svg'
 import Image from 'next/image'
 
 
@@ -71,7 +71,8 @@ export default function Slider(props) {
             /> */}
             <img
               alt='lArrow'
-              src={'https://cdn-icons-png.flaticon.com/128/1665/1665761.png'}
+              // src={'https://cdn-icons-png.flaticon.com/128/1665/1665761.png'}
+              src={'/assets/logos/icons-rigth-arrow.svg'}
               height={40}
               width={40}
             />
@@ -85,7 +86,8 @@ export default function Slider(props) {
               /> */}
             <img
               alt='rArrow'
-              src={'https://cdn-icons-png.flaticon.com/128/1665/1665761.png'}
+              src={'/assets/logos/icons-rigth-arrow.svg'}
+              // src={'https://cdn-icons-png.flaticon.com/128/1665/1665761.png'}
               height={40}
               width={40}
             />
