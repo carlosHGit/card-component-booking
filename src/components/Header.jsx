@@ -1,5 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
+import UserMenu from "./UserMenu";
 // import userImg from '../assets/logos/icon-user.png'
 import '../styles/Header.module.css'
 
@@ -44,17 +45,12 @@ export const Header = () => {
           </select>
         </Secondform>
       </Forms>
-      <UserProfile>
+      <User>
         <a className="become-host" href="#">Hazte anfitrión</a>
-        <img className="user-img" src="" alt="Profile" />
         <span className="notifications">?</span>
-        <ul className="user-menu">
-          <li>Mensajes</li>
-          <li>Notificaciones </li>
-          <li>Listas de favoritos <span className="menu-notifications">99</span></li>
-          <li>Cuenta</li>
-        </ul>
-      </UserProfile>
+        <UserMenu/>
+      </User>
+
     </Nav>
   );
 };
@@ -121,7 +117,7 @@ const Secondform = styled.form`
   }
 `
 
-const UserProfile = styled.div`
+const User = styled.div`
   margin-top: 30px;
   display: flex;
   align-items: center;
@@ -136,7 +132,7 @@ const UserProfile = styled.div`
   & img{
     height: 60px;
     width: 60px;
-    background-color: #7e7f80;
+    background-color: #1572A1;
     border-radius: 50%;
   }
   & > span{

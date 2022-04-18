@@ -1,5 +1,5 @@
-import fullHeart from '../assets/logos/icons-full-heart.svg'
-import emptyHeart from '../assets/logos/icons-empty-heart.svg'
+import React from 'react'
+import Favs from './Favs'
 import starLogo from '../assets/logos/icons8-star-90 2.svg'
 import Image from 'next/image'
 import { Slider } from './Slider'
@@ -8,6 +8,8 @@ import styled from 'styled-components'
 
 export default function PlaceCard(props) {
   const defaultImage = ['https://images.pexels.com/photos/3342739/pexels-photo-3342739.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500']
+  
+
   return (
     <>
       <MainContainer>
@@ -20,15 +22,7 @@ export default function PlaceCard(props) {
         <DetailsContainer>
           <CardHeader>
             <p>{props.place.title1}</p>
-            {/* <Image
-              src={props.place.like ? fullHeart : emptyHeart}
-              alt={"Place image"}
-            /> */}
-            <img
-              src={'https://cdn-icons-png.flaticon.com/128/4643/4643982.png'}
-              width={40}
-              height={40}
-              alt={"HeartIcon"}></img>
+            <Favs/>
           </CardHeader>
           <CardBody>
             <SubTitleCardBody>
